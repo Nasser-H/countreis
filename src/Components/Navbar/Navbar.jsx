@@ -3,11 +3,11 @@ import React, { useContext } from 'react'
 import { CountriesContext } from '../../context/CountriesContext'
 
 export default function Navbar() {
-    let { getCountries } = useContext(CountriesContext);
+    let { getCountry } = useContext(CountriesContext);
     const formik = useFormik({
         initialValues:{
             country:''
-        },onSubmit:getCountries
+        }, onSubmit: getCountry
     });
     return <>
         <div className='py-5 bg-blue-400 fixed w-full'>
