@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from './Components/Home/Home'
-import CountriesContextProvider from './context/CountriesContext';
+import CountriesContextProvider from './context/CountriesContext.jsx';
 
 
 
