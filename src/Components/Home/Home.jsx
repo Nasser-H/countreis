@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Navbar from '../Navbar/Navbar'
-import { CountriesContext } from '../../context/CountriesContext'
+import { CountriesContext } from '../../context/CountryContext'
 
 export default function Home() {
     let { country, err } = useContext(CountriesContext);

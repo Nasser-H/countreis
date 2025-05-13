@@ -1,12 +1,12 @@
 import { useFormik } from 'formik'
 import React, { useContext } from 'react'
-import { CountriesContext } from '../../context/CountriesContext'
+import { CountriesContext } from '../../context/CountryContext'
 
 export default function Navbar() {
     let { getCountry } = useContext(CountriesContext);
     const formik = useFormik({
-        initialValues:{
-            country:''
+        initialValues: {
+            country: ''
         }, onSubmit: getCountry
     });
     return <>
@@ -20,8 +20,8 @@ export default function Navbar() {
                         </svg>
                     </div>
                     <input
-                    value={formik.values.country} onBlur={formik.handleBlur} onChange={formik.handleChange}
-                    type="search" id="country" name='country' className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Search for the country..." required />
+                        value={formik.values.country} onBlur={formik.handleBlur} onChange={formik.handleChange}
+                        type="search" id="country" name='country' className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Search for the country..." required />
                     <button type="submit" className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">Search</button>
                 </div>
             </form>
